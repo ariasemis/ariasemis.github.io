@@ -1,4 +1,4 @@
-Source content for my personal blog. 
+Source content for my [personal blog](https://ariasemis.github.io/). 
 
-* run: `bundle exec jekyll serve` to preview at [localhost](http://localhost:4000)
-* build: `bundle exec jekyll build`
+* `bundle exec jekyll serve` to preview at [localhost](http://localhost:4000)
+* `bundle exec jekyll build`
