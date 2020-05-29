@@ -13,7 +13,7 @@ end
 
 # because Windows does not include zoneinfo files
 install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
-  gem "tzinfo", "~> 1.2"
+  gem "tzinfo", "~> 2.0"
   gem "tzinfo-data"
 end
 
