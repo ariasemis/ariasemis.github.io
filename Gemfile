@@ -2,8 +2,6 @@ source "https://rubygems.org"
 
 # gem "jekyll", "~> 3.8.7"
 
-gem "minima", "~> 2.0"
-
 # to upgrade, run `bundle update github-pages`
 gem "github-pages", "~> 206", group: :jekyll_plugins
 

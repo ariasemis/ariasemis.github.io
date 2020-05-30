@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    min-height: 100vh;
+    max-width: 960px;
+}
+
+.main {
+    flex-grow: 1;
+    max-width: 660px; // TODO:
+}
+
+.side {
+    flex: 0 0 auto;
+}
