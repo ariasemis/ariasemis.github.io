@@ -1,18 +1,20 @@
 <aside class="side">
-    <!-- TODO:
-        picture
-        bio
-        social links
-        blog links (tags, archive)
-        footer: copyright, link to source
-     -->
-     <header>
-         <a href="/"><img src="{{ "/assets/ariasemilio.png" | relative_url }}"></a>
-         <a href="/"><h2>Arias Emilio</h2></a>
-     </header>
-    <nav>
-        <ul>
-            <li><a href="{{ "/feed.xml" | relative_url }}">subscribe</a></li>
-        </ul>
-    </nav>
+    <div>
+        <a href="/"><img class="bio-img" src="{{ "/assets/ariasemilio.png" | relative_url }}"></a>
+    </div>
+    <div>
+        <p>Hi there!</p>
+        <p>I'm <strong>Emilio</strong> and here I write about stuff.</p>
+        <p>You can keep up with what I'm doing by following the
+            <a href="{{ "/feed.xml" | relative_url }}">RSS feed</a> for the blog.
+        </p>
+        <nav>
+            <!-- 
+                currently I don't have many posts nor tags, 
+                a single link to the archive should do 
+            -->
+            <a href="/">Explore all articles</a>
+        </nav>
+    </div>
+    <!-- TODO: footer: copyright, link to source -->
 </aside>

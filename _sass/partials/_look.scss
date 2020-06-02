@@ -1,0 +1,221 @@
+
+// TODO: responsive reduce padding and font size
+
+// fonts
+$font-serif: 'PT Serif', Georgia, serif;
+$font-sans: 'Nunito Sans', 'Helvetica', 'Arial', sans-serif;
+$font-mono: 'Source Code Pro', Courier, monospace;
+
+// colors
+$color_light_shade: #F2F0F3;
+$color_light_accent: #A19A94;
+$color_main: #8C98A1;
+$color_dark_accent:#88766E;
+$color_dark_shade: #252631;
+
+// base
+html {
+    font-family: $font-serif;
+    color: $color_dark_shade;
+    background-color: $color_main;
+    // font-size 1.25rem ??
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-size: 2rem;
+}
+h2 {
+    font-size: 1.5rem;
+}
+h3 {
+    font-size: 1.17rem;
+}
+h4 {
+    font-size: 1rem;
+}
+h5 {
+    font-size: 0.83rem;
+}
+h6 {
+    font-size: 0.67rem;
+}
+
+article {
+    header {
+        h1 {
+            font-family: $font-sans;
+            font-style: normal;
+            a {
+                color: $color_dark_shade;
+            }
+        }
+    }
+
+    a {
+        color: $color_dark_accent;
+
+        &:hover, &:focus {
+            color: $color_light_accent;    
+        }
+    }
+
+    p {
+        line-height: 1.5rem; // TODO: 
+    }
+        
+    dl {
+        font-size: 0.9rem;
+        dt {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        dd {
+            margin-bottom: 0.5em;
+        }
+    }
+
+    li::marker {
+        font-size: 0.8em;
+        color: $color_dark_accent; // TODO: better color
+    }
+
+    abbr {
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: help;
+    }
+
+    // TODO: inside article ??
+    q, blockquote {
+        color: $color_dark_accent; // mmmm same as link, not a good idea
+        font-style: italic;
+        quotes: "“" "”" "‘" "’";
+
+        // TODO: color for quotes
+        &::before {
+        content: open-quote;
+        }
+    
+        &::after {
+        content: close-quote;
+        }
+    }
+    q::before, q::after {
+        line-height: 0.1em;
+        vertical-align: -.2em;
+        font-size: 1.5em;
+        font-style: normal;
+    }
+    blockquote {
+        position: relative;
+
+        &::before, &::after {
+            position: absolute;
+            line-height: 1em;
+            font-size: 4em;
+        }
+
+        &::before {
+            left: -.8em;
+        }
+
+        &::after {
+            right: 0;
+            bottom: -.5em;
+        }
+    }
+
+    cite:before {
+        content: '\2014\00A0';
+    }
+
+    p cite { // TODO: we should style the whole "p" with the "cite" inside, not just the cite
+        display: block;
+        text-align: right;
+        margin-top: -.5rem;
+        font-size: .9rem;
+    }
+
+    table {
+        width: 100%;
+        font-size: 0.9em;
+        font-family: $font-sans;
+        border: 1px solid $color_dark_shade;
+        border-collapse: collapse;
+        margin-bottom: 1rem;
+
+        thead {
+            background-color: $color_dark_shade; // TODO: a bit lighter
+            color: $color_light_shade;
+        }
+
+        td, th {
+            padding: 0.25rem 0.5rem;
+            border: 1px solid $color_dark_shade;
+        }
+
+        th {
+            text-align: left;
+        }
+    }
+
+}
+
+// classes
+.main {
+    background-color: $color_light_shade;
+}
+
+.side {
+    font-family: $font-sans;
+    font-size: 0.9rem;
+    color: $color_light_shade;
+
+    a {
+        color: $color_dark_accent; // TODO: better colors
+
+        &:hover {
+            color: $color_light_accent;
+        }
+    }
+
+    .bio-img {
+        max-width: 10rem;
+        border-radius: 10rem;
+    }
+}
+
+// code blocks
+
+code {
+    // background-color: $color_dark_shade;
+    color: $color_light_shade;
+    font-family: $font-mono;
+    padding: 1px 3px;
+    // box
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background: $color_dark_shade;
+}
+
+pre {
+    margin: 6px 0;
+    padding: 6px 12px;
+    color: $color_light_shade;
+    overflow: auto;
+    // box
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background: $color_dark_shade;
+    // code
+    code {
+        padding: 0;
+    }
+}
