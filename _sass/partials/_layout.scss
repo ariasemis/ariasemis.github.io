@@ -37,7 +37,8 @@ body {
     display: flex;
     flex-flow: row wrap;
     flex: 1 0 12rem; // instead of flex+max-width
-    //// justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 
     & > * {
         flex-basis: 12rem;
