@@ -11,7 +11,7 @@ $font-mono: 'Source Code Pro', Courier, monospace;
 $color_light_shade: #F2F0F3;
 $color_light_accent: #CA9A8C;
 $color_main: #D6264E;
-$color_dark_accent:#DEDCE0; // 8E8B9A
+$color_dark_accent:#DEDCE0;
 $color_dark_shade: #252631;
 
 // base
@@ -32,159 +32,149 @@ h2 {
     font-size: 1.5rem;
 }
 h3 {
-    font-size: 1.17rem;
-}
-h4 {
-    font-size: 1rem;
-}
-h5 {
-    font-size: 0.83rem;
-}
-h6 {
-    font-size: 0.67rem;
+    font-size: 1.25rem;
 }
 
 .main {
     background-color: $color_light_shade;
     color: $color_dark_shade;
     
-    article {
-        header {
-            h1 {
-                font-family: $font-sans;
-                font-style: normal;
-                a {
-                    color: $color_dark_shade;
-
-                    &:hover {
-                        color: $color_main;
-                    }
-                }
-            }
-        }
-
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $font-sans;
+        
         a {
-            color: $color_main;
+            color: $color_dark_shade;
 
-            &:hover, &:focus {
-                color: $color_light_accent;    
-            }
-        }
-
-        p {
-            line-height: 1.5rem; // TODO: 
-        }
-            
-        dl {
-            font-size: 0.9rem;
-            dt {
-                font-size: 1rem;
-                font-weight: bold;
-            }
-            dd {
-                margin-bottom: 0.5em;
-            }
-        }
-
-        li::marker {
-            font-size: 0.8em;
-            color: $color_main; // TODO: better color
-        }
-
-        abbr {
-            font-weight: bold;
-            text-transform: uppercase;
-            cursor: help;
-        }
-
-        q, blockquote {
-            font-style: italic;
-            quotes: "“" "”" "‘" "’";
-
-            &::before, &::after {
+            &:hover {
                 color: $color_main;
             }
+        }
+    }
 
-            &::before {
-                content: open-quote;
-            }
+    a {
+        color: $color_main;
+
+        &:hover, &:focus {
+            color: $color_light_accent;    
+        }
+    }
+
+    p {
+        line-height: 1.5rem;
+    }
         
-            &::after {
-                content: close-quote;
-            }
+    dl {
+        font-size: 0.9rem;
+        
+        dt {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        
+        dd {
+            margin-bottom: 0.5em;
+        }
+    }
+
+    li::marker {
+        font-size: 0.8em;
+        color: $color_main;
+    }
+
+    abbr {
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: help;
+    }
+
+    q, blockquote {
+        font-style: italic;
+        quotes: "“" "”" "‘" "’";
+
+        &::before, &::after {
+            color: $color_main;
         }
 
-        q::before, q::after {
-            line-height: 0.1em;
-            vertical-align: -.2em;
-            font-size: 1.5em;
-            font-style: normal;
+        &::before {
+            content: open-quote;
+        }
+    
+        &::after {
+            content: close-quote;
+        }
+    }
+
+    q::before, q::after {
+        line-height: 0.1em;
+        vertical-align: -.2em;
+        font-size: 1.5em;
+        font-style: normal;
+    }
+
+    blockquote {
+        position: relative;
+
+        &::before, &::after {
+            position: absolute;
+            line-height: 1em;
+            font-size: 4em;
         }
 
-        blockquote {
-            position: relative;
-
-            &::before, &::after {
-                position: absolute;
-                line-height: 1em;
-                font-size: 4em;
-            }
-
-            &::before {
-                left: -.8em;
-            }
-
-            &::after {
-                right: 0;
-                bottom: -.5em;
-            }
+        &::before {
+            left: -.8em;
         }
 
-        cite:before {
-            content: '\2014\00A0';
+        &::after {
+            right: 0;
+            bottom: -.5em;
+        }
+    }
+
+    cite:before {
+        content: '\2014\00A0';
+    }
+
+    p cite {
+        display: block;
+        text-align: right;
+        margin-top: -.5rem;
+        font-size: .9rem;
+    }
+
+    table {
+        width: 100%;
+        font-size: 0.9em;
+        font-family: $font-sans;
+        border: 1px solid $color_dark_shade;
+        border-collapse: collapse;
+        margin-bottom: 1rem;
+
+        thead {
+            background-color: $color_main;
+            color: $color_light_shade;
         }
 
-        p cite {
-            display: block;
-            text-align: right;
-            margin-top: -.5rem;
-            font-size: .9rem;
-        }
-
-        table {
-            width: 100%;
-            font-size: 0.9em;
-            font-family: $font-sans;
+        td, th {
+            padding: 0.25rem 0.5rem;
             border: 1px solid $color_dark_shade;
-            border-collapse: collapse;
-            margin-bottom: 1rem;
-
-            thead {
-                background-color: $color_main;
-                color: $color_light_shade;
-            }
-
-            td, th {
-                padding: 0.25rem 0.5rem;
-                border: 1px solid $color_dark_shade;
-            }
-
-            th {
-                text-align: left;
-            }
         }
 
+        th {
+            text-align: left;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 0 1rem;
     }
     
-    // // highlight
-    // ::-moz-selection {
-    //     background: $color_main;
-    //     color: $color_light_shade;
-    // }
-    // ::selection {
-    //     background: $color_main;
-    //     color: $color_light_shade;
-    // }
+    article + * {
+        border-top: 1px solid $color_dark_accent;
+        margin-top: 2rem;
+    }
 }
 
 .side {
@@ -203,34 +193,5 @@ h6 {
     .bio-img {
         max-width: 10rem;
         border-radius: 10rem;
-    }
-}
-
-// code blocks
-
-code {
-    color: $color_dark_shade;
-    font-family: $font-mono;
-    padding: 1px 3px;
-    // box
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    background: $color_dark_accent;
-}
-
-pre {
-    margin: 6px 0;
-    padding: 6px 12px;
-    color: $color_dark_shade;
-    overflow: auto;
-    // box
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    background: $color_dark_accent;
-    // code
-    code {
-        padding: 0;
     }
 }

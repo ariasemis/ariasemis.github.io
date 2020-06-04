@@ -143,4 +143,10 @@ adder(2, 6);
 
 *[CSS]: Cascading Style Sheets
 
-<!-- TODO: images/figures -->
+## Images
+
+Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.
+
+![placeholder](https://placehold.it/800x400 "Large example image")
+![placeholder](https://placehold.it/400x200 "Medium example image")
+![placeholder](https://placehold.it/200x200 "Small example image")
