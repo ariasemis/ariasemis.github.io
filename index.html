@@ -1,13 +1,12 @@
 ---
 layout: default
-# title: 
 ---
 
-{% for post in site.posts %}
+{% for post in paginator.posts %}
 <article>
     <header>
         <h1>
-            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            <a href="{{ post.url | relative_url }}" rel="bookmark">{{ post.title | escape }}</a>
         </h1>
     </header>
     
@@ -15,3 +14,21 @@ layout: default
 
 </article>
 {% endfor %}
+
+<nav class="pagination">
+
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" rel="prev">Previous</a>
+    {% else %}
+    <span></span>
+    {% endif %}
+
+    <a href="/archive">Archive</a>
+    
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" rel="next">Next</a>
+    {% else %}
+    <span></span>
+    {% endif %}
+
+</nav>

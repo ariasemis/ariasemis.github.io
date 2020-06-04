@@ -11,6 +11,7 @@ body {
     flex-basis: 0;
     flex-grow: 1;
     min-width: 61.9%;
+    min-height: 90vh;
     padding: 3rem 3rem 0;
 }
 
@@ -31,6 +32,18 @@ body {
 
     & > * {
         flex-basis: 12rem;
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+
+    & > * {
+        flex: 1;
+        text-align: center;
     }
 }
 
