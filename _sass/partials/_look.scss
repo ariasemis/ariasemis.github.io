@@ -1,23 +1,7 @@
 
-// TODO: responsive reduce padding and font size
-
-// fonts
-$font-serif: 'PT Serif', Georgia, serif;
-$font-sans: 'Nunito Sans', 'Helvetica', 'Arial', sans-serif;
-$font-mono: 'Source Code Pro', Courier, monospace;
-
-// colors
-// rename vars
-$color_light_shade: #F2F0F3;
-$color_light_accent: #CA9A8C;
-$color_main: #D6264E;
-$color_dark_accent:#DEDCE0;
-$color_dark_shade: #252631;
-
-// base
 html {
     font-family: $font-serif;
-    background-color: $color_dark_shade;
+    background-color: $color_dark_on_light;
 }
 
 a {
@@ -25,25 +9,19 @@ a {
     color: inherit;
 }
 
-h1 {
-    font-size: 2rem;
-}
-h2 {
-    font-size: 1.5rem;
-}
-h3 {
-    font-size: 1.25rem;
-}
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
 
 .main {
-    background-color: $color_light_shade;
-    color: $color_dark_shade;
+    background-color: $color_light_on_dark;
+    color: $color_dark_on_light;
     
     h1, h2, h3, h4, h5, h6 {
         font-family: $font-sans;
         
         a {
-            color: $color_dark_shade;
+            color: $color_dark_on_light;
 
             &:hover {
                 color: $color_main;
@@ -55,7 +33,7 @@ h3 {
         color: $color_main;
 
         &:hover, &:focus {
-            color: $color_light_accent;    
+            color: $color_main_light;    
         }
     }
 
@@ -145,18 +123,18 @@ h3 {
         width: 100%;
         font-size: 0.9em;
         font-family: $font-sans;
-        border: 1px solid $color_dark_shade;
+        border: 1px solid $color_dark_on_light;
         border-collapse: collapse;
         margin-bottom: 1rem;
 
         thead {
             background-color: $color_main;
-            color: $color_light_shade;
+            color: $color_light_on_dark;
         }
 
         td, th {
             padding: 0.25rem 0.5rem;
-            border: 1px solid $color_dark_shade;
+            border: 1px solid $color_dark_on_light;
         }
 
         th {
@@ -172,7 +150,7 @@ h3 {
     }
     
     article + * {
-        border-top: 1px solid $color_dark_accent;
+        border-top: 1px solid $color_shadow_light;
         margin-top: 2rem;
     }
 }
@@ -180,13 +158,13 @@ h3 {
 .side {
     font-family: $font-sans;
     font-size: 0.9rem;
-    color: $color_light_shade;
+    color: $color_light_on_dark;
 
     a {
         color: $color_main;
 
         &:hover {
-            color: $color_light_accent;
+            color: $color_main_light;
         }
     }
 

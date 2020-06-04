@@ -1,3 +1,16 @@
+
+$font-serif: 'PT Serif', Georgia, serif;
+$font-sans: 'Nunito Sans', 'Helvetica', 'Arial', sans-serif;
+$font-mono: 'Source Code Pro', Courier, monospace;
+
+$color_dark_on_light: #252631;
+$color_light_on_dark: #F2F0F3;
+$color_main: #D6264E;
+$color_main_light: #CA9A8C;
+$color_main_dark: #a31515;
+$color_shadow_light: #DEDCE0;
+$color_shadow_dark: #888888;
+
 @import
     "partials/layout",
     "partials/look",

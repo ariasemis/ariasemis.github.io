@@ -1,9 +1,9 @@
 $code_font: $font-mono;
-$code_text: $color_dark_shade;
-$code_background: $color_dark_accent;
+$code_text: $color_dark_on_light;
+$code_background: $color_shadow_light;
 $code_keyword: $color_main;
-$code_comment: #888888; // TODO: var
-$code_literal: #a31515;
+$code_comment: $color_shadow_dark;
+$code_literal: $color_main_dark;
 
 // blocks
 code, pre {
