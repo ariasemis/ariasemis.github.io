@@ -47,5 +47,16 @@ body {
     }
 }
 
-// TODO: responsive reduce main padding
-// TODO: responsive remove sticky if little height
+// reduce padding on small screen
+@media only screen and (max-width: 30rem) {
+    .main {
+        padding: 0 1rem;
+    }
+}
+
+// remove sticky if not enough height
+@media only screen and (max-height: 22.5rem) {
+    .side {
+        position: relative;   
+    }
+}
