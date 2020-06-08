@@ -3,25 +3,33 @@ layout: default
 title: Archive
 ---
 
-<article>
+<article class="archive">
     <header>
         <h1>{{ page.title }}</h1>
     </header>
 
-    {% for post in site.posts %}
+    <nav>
+        <ul>
+            
+            {% for post in site.posts %}
 
-    {% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
+                {% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
+
+                {% if year != previous %}
+                    {% if previous %}
+                        </ul>
+                    </li>
+                    {% endif %}
+
+                    <li><h5>{{ year }}</h5>
+                        <ul>
+                    {% capture previous %}{{year}}{% endcapture %}
+                {% endif %}
+
+                <li><a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a></li>
+
+            {% endfor %}
+        </ul>
+    </nav>
     
-    {% if year != previous %}
-    <h3>{{ year }}</h3>
-    
-    {% capture previous %}{{year}}{% endcapture %}
-    {% endif %}
-   
-    <div>
-        <a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a>
-    </div>
-
-    {% endfor %}
-
 </article>
