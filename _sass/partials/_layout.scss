@@ -47,6 +47,12 @@ body {
     }
 }
 
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
 // reduce padding on small screen
 @media only screen and (max-width: 30rem) {
     .main {

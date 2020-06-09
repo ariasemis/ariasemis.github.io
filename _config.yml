@@ -9,7 +9,8 @@ baseurl: "" # subpath
 url: "https://ariasemis.github.io/"
 
 paginate: 5
-# paginate_path: '/page:num'
+
+permalink: /:slug
 
 # Build settings
 markdown: kramdown

@@ -185,3 +185,18 @@ h3 { font-size: 1.25rem; }
         border-bottom: solid 1px $color_shadow_light;
     }
 }
+
+.post-meta {
+    font-family: $font-sans;
+    font-size: 0.8rem;
+    color: $color_shadow_dark;
+    border-bottom: solid 1px $color_shadow_light;
+
+    a {
+        color: inherit;
+        margin: 0 0.1em;
+        &:hover {
+            color: $color_main;
+        }
+    }
+}

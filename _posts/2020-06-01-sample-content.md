@@ -2,7 +2,7 @@
 layout: post
 title:  "Sample Content"
 date:   2020-06-01 17:15:00 -0300
-categories:   markdown 
+tags:   markdown 
 ---
 A variety of common HTML elements to demonstrate the theme's stylesheet and verify they have been styled appropriately.
 

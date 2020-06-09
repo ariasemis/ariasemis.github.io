@@ -1,0 +1,8 @@
+<div class="post-meta">
+    <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%Y-%m-%d"  }}</time>
+    <span>
+        {% for tag in include.post.tags %}
+        <a href="/tags#{{ tag | slugify }}">{{ tag | upcase }}</a>
+        {% endfor %}
+    </span>
+</div>
