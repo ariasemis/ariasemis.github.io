@@ -16,22 +16,26 @@ body {
 }
 
 .side {
+    flex: 1 0 12rem;
     padding: 2rem;
-
-    // sticky sidebar
     position: -webkit-sticky;
     position: sticky;
     top: 0;
 
-    // move text to the side of the image on small width
-    display: flex;
-    flex-flow: row wrap;
-    flex: 1 0 12rem;
-    align-items: center;
-    justify-content: center;
+    .bio {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+    
+        & > * {
+            flex-basis: 12rem;
+        }
+    }
 
-    & > * {
-        flex-basis: 12rem;
+    footer {
+        margin-top: 0.5rem;
+        text-align: center;
     }
 }
 

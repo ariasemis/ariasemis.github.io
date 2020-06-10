@@ -150,7 +150,7 @@ h3 { font-size: 1.25rem; }
     }
     
     article + * {
-        border-top: 1px solid $color_shadow_light;
+        border-top: medium dashed $color_shadow_light;
         margin-top: 2rem;
     }
 }
@@ -171,6 +171,12 @@ h3 { font-size: 1.25rem; }
     .bio-img {
         max-width: 10rem;
         border-radius: 10rem;
+    }
+
+    footer {
+        font-family: $font-serif;
+        font-size: 0.8rem;
+        font-style: italic;
     }
 }
 
