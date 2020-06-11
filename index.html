@@ -13,6 +13,8 @@ layout: default
 
     {{ post.content }}
 
+    <a href="{{ post.url | relative_url }}#comments">View Comments</a>
+
 </article>
 {% endfor %}
 

@@ -1,0 +1,36 @@
+<section id="comments">
+    <h2>Comments</h2>
+
+    <!-- submit -->
+    <form method="POST" action="/">
+        <fieldset>
+            <legend>Leave a Comment</legend>
+            <label class="input-autosize">
+                <span>Comment</span>
+                <textarea
+                    name="fields[message]"
+                    placeholder="Join the discussion..."
+                    spellcheck
+                    oninput="this.parentNode.dataset.value = this.value"
+                    rows="1"></textarea>
+            </label>
+            <label>
+                <span>Name</span>
+                <input type="text" name="fields[name]">
+            </label>
+            <label>
+                <span>E-mail</span>
+                 <!-- (optional) -->
+                <input type="email" name="fields[email">
+            </label>
+
+            <button>Submit</button>
+        </fieldset>
+    </form>
+
+    <!-- TODO: comment list -->
+    <div>
+        ...
+    </div>
+
+</section>

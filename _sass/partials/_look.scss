@@ -17,6 +17,10 @@ h3 { font-size: 1.25rem; }
     background-color: $color_light_on_dark;
     color: $color_dark_on_light;
     
+    #comments {
+        border-top: 1px solid $color_shadow_light;    
+    }
+    
     h1, h2, h3, h4, h5, h6 {
         font-family: $font-sans;
         
