@@ -210,3 +210,25 @@ h3 { font-size: 1.25rem; }
         }
     }
 }
+
+.comment-list {
+    list-style-type: none;
+    margin: 1rem 0;
+    padding: 1rem 0 0;
+    border-top: solid 1px $color_shadow_light;
+
+    .comment-item {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .comment-avatar {
+        border-radius: 50px;
+        max-width: 50px;
+        margin: 0 1rem;
+
+        @media only screen and (max-width: 40rem) {
+            margin: 0 0.5rem;
+        }
+    }
+}
