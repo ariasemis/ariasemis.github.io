@@ -1,17 +1,21 @@
 comments:
   
-  name: "ariasemis - blog"
+  # git settings
 
   branch: "feature/init"
 
   commitMessage: "Comment from {fields.name} on {options.slug}"
 
-  path: "_date/comments/{options.slug}"
+  # file settings
+
+  path: "_data/comments/{options.slug}"
 
   filename: "entry{@timestamp}"
 
   format: "yml"
   
+  # data settings
+
   allowedFields: ["name", "email", "message"]
   
   requiredFields: ["name", "message"]
@@ -25,7 +29,13 @@ comments:
   transforms:
     email: md5
 
+  # anti-spam settings
+
   moderation: true
 
   reCaptcha:
     enabled: false
+  
+  # notification settings
+
+  name: "ariasemis - blog"
