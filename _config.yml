@@ -1,19 +1,24 @@
 # this file is *NOT* reloaded when using 'bundle exec jekyll serve'. 
-# when changing this file, restart the server process.
 
 # Site settings
 title: ariasemis - blog
+
 description: >- 
   My personal blog
-baseurl: "" # subpath
+
 url: "https://ariasemis.github.io/"
+
+baseurl: "" # subpath
 
 paginate: 5
 
 permalink: /:slug
 
+staticman_url: https://emi-staticman.herokuapp.com/v2/entry/ariasemis/ariasemis.github.io/feature%2Finit/comments
+
 # Build settings
 markdown: kramdown
+
 plugins:
   - jekyll-feed
   - jekyll-paginate

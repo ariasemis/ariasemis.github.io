@@ -1,7 +1,7 @@
 <section id="comments">
     <h2>Comments</h2>
 
-    <form method="POST" >
+    <form method="POST" action="{{ site.staticman_url }}" >
         
         <fieldset>
             <label class="autosize">
@@ -26,9 +26,9 @@
 
         <fieldset class="hidden">
             <input type="hidden" name="options[slug]" value="{{ page.slug }}">
+            <input type="hidden" name="options[redirect]" value="{{ page.url | absolute_url }}">
             <label>
-                <span>Leave blank if you are a human:</span>
-                <input type="text" name="fields[honey]" autocomplete="off">
+                <input type="text" name="fields[honey]" autocomplete="off" placeholder="Leave blank if you are a human">
             </label>
         </fieldset>
 

@@ -1,0 +1,31 @@
+comments:
+  
+  name: "ariasemis - blog"
+
+  branch: "feature/init"
+
+  commitMessage: "Comment from {fields.name} on {options.slug}"
+
+  path: "_date/comments/{options.slug}"
+
+  filename: "entry{@timestamp}"
+
+  format: "yml"
+  
+  allowedFields: ["name", "email", "message"]
+  
+  requiredFields: ["name", "message"]
+
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: "iso8601"
+  
+  transforms:
+    email: md5
+
+  moderation: true
+
+  reCaptcha:
+    enabled: false
