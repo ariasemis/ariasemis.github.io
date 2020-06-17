@@ -2,7 +2,7 @@ comments:
   
   # git settings
 
-  branch: "feature/init"
+  branch: "master"
 
   commitMessage: "Comment from {fields.name} on {options.slug}"
 
