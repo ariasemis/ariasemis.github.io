@@ -50,7 +50,7 @@
                     <strong>{{ comment[1].name }}</strong>
                     on
                     <time datetime="{{ comment[1].date | date_to_xmlschema }}">{{ comment[1].date | date: "%Y-%m-%d" }}</time>
-                    <a href="#comment-{{ index }}" title="link to this comment">🔗</a>
+                    <a href="#comment-{{ index }}" title="link to this comment" rel="bookmark">🔗</a>
                 </header>
                 <div>
                     {{ comment[1].message | markdownify }}

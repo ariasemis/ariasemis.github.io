@@ -3,13 +3,13 @@ $font-serif: 'PT Serif', Georgia, serif;
 $font-sans: 'Nunito Sans', 'Helvetica', 'Arial', sans-serif;
 $font-mono: 'Source Code Pro', Courier, monospace;
 
-$color_dark_on_light: #252631;
-$color_light_on_dark: #F2F0F3;
-$color_main: #D6264E;
-$color_main_light: #CA9A8C;
-$color_main_dark: #a31515;
-$color_shadow_light: #DEDCE0;
-$color_shadow_dark: #888888;
+$color_dark_on_light: hsl(235, 14%, 17%);
+$color_light_on_dark: hsl(280, 11%, 95%);
+$color_main: hsl(346, 70%, 49%);
+$color_main_light: hsl(14, 37%, 67%);
+$color_main_dark: hsl(0, 77%, 36%);
+$color_shadow_light: hsl(270, 6%, 87%);
+$color_shadow_dark: hsl(0, 0%, 53%);
 
 @import
     "partials/layout",
