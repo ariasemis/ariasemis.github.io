@@ -24,6 +24,14 @@
             </label>
         </fieldset>
 
+        <fieldset class="hidden">
+            <input type="hidden" name="options[slug]" value="{{ page.slug }}">
+            <label>
+                <span>Leave blank if you are a human:</span>
+                <input type="text" name="fields[honey]" autocomplete="off">
+            </label>
+        </fieldset>
+
         <button>Submit</button>
     </form>
 
@@ -34,7 +42,7 @@
         <div class="comment-item">
             <img class="comment-avatar" src="https://www.gravatar.com/avatar/{{ comment[1].email }}?d=mm&amp;s=50" alt="{{ comment[1].name }}">
             <div>
-                <header>
+                <header class="comment-meta">
                     <strong>{{ comment[1].name }}</strong>
                     on
                     <time datetime="{{ comment[1].date | date_to_xmlschema }}">{{ comment[1].date | date: "%Y-%m-%d" }}</time>
