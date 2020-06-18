@@ -1,6 +1,5 @@
 # this file is *NOT* reloaded when using 'bundle exec jekyll serve'. 
 
-# Site settings
 title: ariasemis - blog
 
 description: >- 
@@ -16,9 +15,16 @@ permalink: /:slug
 
 comments_api: https://emi-staticman.herokuapp.com/v2/entry/ariasemis/ariasemis.github.io/master/comments
 
-# Build settings
 markdown: kramdown
 
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/avatar.png
