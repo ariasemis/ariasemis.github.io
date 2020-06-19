@@ -14,10 +14,8 @@ jobs:
       with:
         fetch-depth: 1
 
-    - name: install Jekyll
+    - name: Build the site in the jekyll/builder container
       run: |
-        sudo gem install bundler jekyll
-        sudo bundle install
-
-    - name: build site
-      run: bundle exec jekyll build
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
