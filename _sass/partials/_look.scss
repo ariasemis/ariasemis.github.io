@@ -1,6 +1,13 @@
 
 html {
     font-family: $font-serif;
+    background: repeating-linear-gradient(
+        -55deg,
+        $color_dark_on_light,
+        $color_dark_on_light 10px,
+        mix(black, $color_dark_on_light, 10%) 10px,
+        mix(black, $color_dark_on_light, 10%) 20px
+    );
     background-color: $color_dark_on_light;
 }
 
