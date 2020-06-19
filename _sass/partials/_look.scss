@@ -248,3 +248,64 @@ h3 { font-size: 1.25rem; }
         }
     }
 }
+
+.bad {
+    font-family: $font-mono;
+    text-align: center;
+
+    h1 {
+        font-family: inherit;
+        font-size: 6rem;
+        line-height: 1;
+    }
+
+    p:nth-child(even) {
+        transform: rotate(-3deg);
+    }
+
+    p:nth-child(odd) {
+        transform: rotate(1deg);
+    }
+
+    .glitch {
+        position: relative;
+        animation: distort .5s infinite linear alternate-reverse;
+
+        &::after {
+            content: attr(data-text);
+            position: absolute;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: -2px;
+            color: blue;
+            text-shadow: -2px 0 cyan, 2px 2px fuchsia;
+            animation: noise 2s infinite linear alternate-reverse;
+        }
+
+        @keyframes distort {
+            $steps: 20;
+            @for $i from 0 to 10 {
+                #{percentage($i * (1 / $steps))} {
+                    $val: random(5);
+                    transform: skew(#{$val}deg);
+                }
+            }
+        }
+
+        @keyframes noise {
+            $steps: 20;
+            @for $i from 0 to $steps {
+                #{percentage($i * (1 / $steps))} {
+                    $top: random(100);
+                    $bottom: random(101 - $top);
+                    $skew: random();
+                    
+                    clip-path: inset(#{$top}% 0 #{$bottom}% 0);
+                    transform: skew(#{$skew}deg);
+                }
+            }
+        }
+    }
+}
