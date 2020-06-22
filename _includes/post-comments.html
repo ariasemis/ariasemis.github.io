@@ -32,7 +32,7 @@
 
         <fieldset class="hidden">
             <input type="hidden" name="options[slug]" value="{{ page.slug }}">
-            <input type="hidden" name="options[redirect]" value="{{ page.url | absolute_url }}#comments">
+            <input type="hidden" name="options[redirect]" value="{{ '/comment-submitted' | absolute_url }}">
         </fieldset>
 
         <button>Submit</button>
