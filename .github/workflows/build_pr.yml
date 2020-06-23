@@ -9,11 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Build Jekyll site
-      uses: fabacab/jekyll-builder-for-github-pages-action@builder-3.8
-      with:
-        jekyll_build_opts: --future
-        pre_build_commands: gem install bundler
-      env: 
-        JEKYLL_UID: 0
-        JEKYLL_GID: 0
+    - name: Build the site in the jekyll/builder container
+      run: |
+        export JEKYLL_VERSION=3.8
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:$JEKYLL_VERSION /bin/bash -c "chmod a+w /srv/jekyll/Gemfile.lock && chmod 777 /srv/jekyll && jekyll build --future"
