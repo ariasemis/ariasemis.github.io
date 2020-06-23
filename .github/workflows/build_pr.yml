@@ -14,3 +14,6 @@ jobs:
       with:
         jekyll_build_opts: --future
         pre_build_commands: gem install bundler
+      env: 
+        JEKYLL_UID: 0
+        JEKYLL_GID: 0
