@@ -150,5 +150,14 @@ form {
         margin: 0;
         margin-bottom: 1rem;
         color: green;
+
+        a {
+            color: inherit;
+            text-decoration-line: underline;
+
+            &:hover {
+                color: inherit;
+            }
+        }
     }
 }
