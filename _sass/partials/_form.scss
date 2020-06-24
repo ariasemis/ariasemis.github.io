@@ -104,6 +104,14 @@ form {
         z-index: -1;
     }
 
+    .loading {
+        cursor: wait;
+    }
+
+    .disallowed {
+        cursor: not-allowed;
+    }
+
     button {
         display: block;
         margin-left: auto;
@@ -122,5 +130,25 @@ form {
             border-style: none;
             padding: 0;
         }
+
+        &:disabled {
+            color: $color_shadow_dark;
+            background-color: $color_shadow_light;
+            border-color: $color_shadow_dark;
+        }
+    }
+
+    .error-message {
+        font-size: .9rem;
+        margin: 0;
+        margin-bottom: 1rem;
+        color: red;
+    }
+
+    .success-message {
+        font-size: .9rem;
+        margin: 0;
+        margin-bottom: 1rem;
+        color: green;
     }
 }

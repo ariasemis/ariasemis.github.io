@@ -37,6 +37,13 @@
             <input type="hidden" name="options[redirect]" value="{{ '/comment-submitted' | absolute_url }}">
         </fieldset>
 
+        <p class="error-message" style="display: none;">
+            <strong>Sorry, an error occurred!</strong> Please make sure to complete all required fields and try again.
+        </p>
+        <p class="success-message" style="display: none;">
+            <strong>Thanks!</strong>  Your comment is under review. It will appear when approved.
+        </p>
+
         <button>Submit</button>
     </form>
 
