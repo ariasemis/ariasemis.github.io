@@ -57,8 +57,10 @@
             <div>
                 <header class="comment-meta">
                     <strong>{{ comment[1].name }}</strong>
-                    on
-                    <time datetime="{{ comment[1].date | date_to_xmlschema }}">{{ comment[1].date | date: "%Y-%m-%d" }}</time>
+                    <time datetime="{{ comment[1].date | date_to_xmlschema }}">
+                        <span class="ago"></span>
+                        on {{ comment[1].date | date: "%Y-%m-%d" }}
+                    </time>
                     <a href="#comment-{{ index }}" title="link to this comment" rel="bookmark">🔗</a>
                 </header>
                 <div>

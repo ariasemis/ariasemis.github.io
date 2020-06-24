@@ -1,5 +1,8 @@
 <div class="post-meta">
-    <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%Y-%m-%d"  }}</time>
+    <time datetime="{{ include.post.date | date_to_xmlschema }}">
+        Posted <span class="ago"></span>
+        on {{ include.post.date | date: "%Y-%m-%d"  }}
+    </time>
     <span>
         {% for tag in include.post.tags %}
         <a href="/tags#{{ tag | slugify }}" rel="tag">{{ tag | upcase }}</a>
