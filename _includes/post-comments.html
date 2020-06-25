@@ -1,4 +1,5 @@
 <section id="comments">
+    <script src="/assets/js/input.js" defer></script>
     <script src="/assets/js/comment.js" defer></script>
 
     <h2>Comments</h2>
@@ -8,11 +9,7 @@
         <fieldset>
             <label class="autosize">
                 <span>Leave a Comment:</span>
-                <textarea
-                    name="fields[message]"
-                    rows="1"
-                    oninput="this.parentNode.dataset.value = this.value"
-                    spellcheck></textarea>
+                <textarea name="fields[message]" rows="1" spellcheck></textarea>
             </label>
 
             <label>

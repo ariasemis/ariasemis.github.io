@@ -40,7 +40,6 @@ form {
             margin: 0;
             border: none;
             background: none;
-            resize: none;
             appearance: none;
 
             &:invalid, &:-moz-ui-invalid {
@@ -49,6 +48,11 @@ form {
                 text-decoration: underline red wavy;
                 text-decoration-thickness: .1em;
             }
+        }
+
+        textarea {
+            overflow: auto;
+            resize: vertical;
         }
 
         &:focus-within {
@@ -79,10 +83,6 @@ form {
             content: attr(data-value) ' ';
             visibility: hidden;
             white-space: pre-wrap;
-        }
-
-        textarea {
-            overflow: auto;
         }
 
         span {
@@ -155,7 +155,7 @@ form {
             color: inherit;
             text-decoration-line: underline;
 
-            &:hover {
+            &:hover, &:focus {
                 color: inherit;
             }
         }

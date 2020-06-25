@@ -34,7 +34,7 @@ h3 { font-size: 1.25rem; }
         a {
             color: $color_dark_on_light;
 
-            &:hover {
+            &:hover, &:focus {
                 color: $color_main;
             }
         }
@@ -174,7 +174,7 @@ h3 { font-size: 1.25rem; }
     a {
         color: $color_main;
 
-        &:hover {
+        &:hover, &:focus {
             color: $color_main_light;
         }
     }
@@ -213,7 +213,8 @@ h3 { font-size: 1.25rem; }
     a {
         color: inherit;
         margin: 0 .1em;
-        &:hover {
+        
+        &:hover, &:focus {
             color: $color_main;
         }
     }
