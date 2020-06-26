@@ -30,3 +30,8 @@ defaults:
       path: ""
     values:
       image: /assets/img/avatar.png
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

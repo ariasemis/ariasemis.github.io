@@ -159,11 +159,21 @@ h3 { font-size: 1.25rem; }
         display: block;
         margin: 0 0 1rem;
     }
+
+    sup {
+        line-height: 0;
+    }
     
     article + * {
         border-top: medium dashed $color_shadow_light;
         margin-top: 2rem;
     }
+}
+
+.footnotes {
+    font-size: .85rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 .side {
