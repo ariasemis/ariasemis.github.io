@@ -1,11 +1,11 @@
 # this file is *NOT* reloaded when using 'bundle exec jekyll serve'. 
 
-title: ariasemis - blog
+title: ariasemi - blog
 
 description: >- 
   My personal blog
 
-url: "https://ariasemis.github.io/"
+url: "https://blog.ariasemi.com/"
 
 baseurl: "" # subpath
 
