@@ -1,7 +1,8 @@
 <div class="post-meta">
     <time datetime="{{ include.post.date | date_to_xmlschema }}">
         Posted <span class="ago"></span>
-        on {{ include.post.date | date: "%Y-%m-%d"  }}
+        on
+        <a href="/archive#{{ include.post.date | date: "%Y" }}">{{ include.post.date | date: "%Y-%m-%d"  }}</a>
     </time>
     <span>
         {% for tag in include.post.tags %}
