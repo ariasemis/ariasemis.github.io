@@ -1,9 +1,19 @@
 # this file is *NOT* reloaded when using 'bundle exec jekyll serve'. 
 
-title: ariasemi - blog
+title: ariasemi
 
 description: >- 
   My personal blog
+
+author:
+  name: Emilio Arias
+  image: /assets/img/avatar.png
+
+social:
+  name: Emilio Arias
+  links:
+    - https://github.com/ariasemis
+    - https://www.linkedin.com/in/ariasemi/
 
 url: "https://blog.ariasemi.com/"
 
