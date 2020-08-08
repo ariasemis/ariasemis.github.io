@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # to upgrade, run `bundle update github-pages`
-gem "github-pages", "~> 206", group: :jekyll_plugins
+gem "github-pages", "~> 207", group: :jekyll_plugins
 
 # because Windows does not include zoneinfo files
 install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
