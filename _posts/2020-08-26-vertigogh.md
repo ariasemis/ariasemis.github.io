@@ -2,6 +2,7 @@
 title: "Dizzy Art"
 date: 2020-08-26 11:30:00 -0300
 tags: TIL vertigo
+comments_locked: true
 ---
 
 A while ago, during an attack, I thought to myself that if what Van Gogh had was Meniere's, then I'd understand why did he cut off his own ear.

@@ -4,6 +4,7 @@
 
     <h2>Comments</h2>
 
+    {% unless page.comments_locked == true %}
     <form class="comment-form" method="POST" action="{{ site.comments_api }}" >
         
         <fieldset>
@@ -43,6 +44,9 @@
 
         <button>Submit</button>
     </form>
+    {% else %}
+    <p><em>Comments on this entry are closed.</em></p>
+    {% endunless %}
 
     {% if site.data.comments[page.slug] %}
     <div class="comment-list">
