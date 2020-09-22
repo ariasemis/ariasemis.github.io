@@ -194,6 +194,11 @@ h3 { font-size: 1.25rem; }
         border-radius: 10rem;
     }
 
+    .feed {
+        padding-left: 17px;
+        background: url("#{$img_path}/feed-icon.png") no-repeat 0 50%;
+    }
+
     footer {
         font-family: $font-serif;
         font-size: .8rem;

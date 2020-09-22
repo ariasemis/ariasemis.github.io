@@ -11,6 +11,8 @@ $color_main_dark: hsl(0, 75%, 35%);
 $color_shadow_light: hsl(260, 5%, 90%);
 $color_shadow_dark: hsl(280, 0%, 53%);
 
+$img_path: "../../assets/img";
+
 @import
     "partials/layout",
     "partials/look",
