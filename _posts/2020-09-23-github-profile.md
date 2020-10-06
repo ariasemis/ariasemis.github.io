@@ -26,6 +26,8 @@ Now I needed some way to display this session in the README file. GitHub is very
 
 Images are allowed though, and with [svg-term][] I could render the entire session to an animated SVG. And yeah it ends up being quite heavy, but at least you can zoom in without loss of quality.
 
+_**Update**: I just found out that Chrome isn't that good at rendering SVGs, so if you want to see it properly I recommend you use firefox._
+
 ## Self-update
 
 Another problem is that the data I'm querying will change over time, but I don't want to have to update this manually.

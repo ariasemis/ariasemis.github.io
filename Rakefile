@@ -14,7 +14,7 @@ end
 
 desc 'Preview at localhost'
 task :serve do
-    sh "bundle exec jekyll serve --watch --incremental --future --drafts"
+    sh "bundle exec jekyll serve --future --drafts"
 end
 
 desc 'Validate site'
