@@ -13,7 +13,11 @@ layout: default
     <div class="e-content">
         {{ post.content }}
     </div>
+    {% if site.data.comments[post.slug] %}
     <a href="{{ post.url | relative_url }}#comments">View Comments</a>
+    {% elsif post.comments_locked != true %}
+    <a href="{{ post.url | relative_url }}#comments">Leave a Comment</a>
+    {% endif %}
 
 </article>
 {% endfor %}
