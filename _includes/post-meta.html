@@ -1,12 +1,12 @@
 <div class="post-meta">
-    <time datetime="{{ include.post.date | date_to_xmlschema }}">
+    <time class="dt-published" datetime="{{ include.post.date | date_to_xmlschema }}">
         Posted <span class="ago"></span>
         on
         <a href="/archive#{{ include.post.date | date: "%Y" }}">{{ include.post.date | date: "%Y-%m-%d"  }}</a>
     </time>
     <span>
         {% for tag in include.post.tags %}
-        <a href="/tags#{{ tag | slugify }}" rel="tag">{{ tag | upcase }}</a>
+        <a class="p-category" href="/tags#{{ tag | slugify }}" rel="tag">{{ tag | upcase }}</a>
         {% endfor %}
     </span>
 </div>

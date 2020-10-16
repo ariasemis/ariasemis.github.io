@@ -19,6 +19,8 @@ url: "https://blog.ariasemi.com/"
 
 baseurl: "" # subpath
 
+parent_url: "https://ariasemi.com/"
+
 paginate: 5
 
 permalink: /:slug

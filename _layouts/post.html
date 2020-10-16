@@ -1,15 +1,15 @@
 ---
 layout: default
 ---
-<article>
+<article class="h-entry">
   <header>
     <h1>
-      <a href="{{ page.url | relative_url }}" rel="bookmark">{{ page.title | escape }}</a>
+      <a class="p-name u-url u-uid" href="{{ page.url | relative_url }}" rel="bookmark">{{ page.title | escape }}</a>
     </h1>
   </header>
   {% include post-meta.html post=page %}
-
-  {{ content }}
-
+  <div class="e-content">
+    {{ content }}
+  </div>
   {% include post-comments.html %}
 </article>

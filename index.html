@@ -3,16 +3,16 @@ layout: default
 ---
 
 {% for post in paginator.posts %}
-<article>
+<article class="h-entry">
     <header>
         <h1>
-            <a href="{{ post.url | relative_url }}" rel="bookmark">{{ post.title | escape }}</a>
+            <a class="p-name u-url u-uid" href="{{ post.url | relative_url }}" rel="bookmark">{{ post.title | escape }}</a>
         </h1>
     </header>
     {% include post-meta.html post=post %}
-
-    {{ post.content }}
-
+    <div class="e-content">
+        {{ post.content }}
+    </div>
     <a href="{{ post.url | relative_url }}#comments">View Comments</a>
 
 </article>
