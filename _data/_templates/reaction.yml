@@ -1,0 +1,8 @@
+# path: _data/reactions/{post.slug}/entry{timestamp}
+
+_id: '' # wm-id
+type: '' # possible values: like-of, repost-of, bookmark-of, mention-of
+url: '' # source
+name: '' # author name
+photo: '' # author photo URL
+profile: '' # author profile URL
