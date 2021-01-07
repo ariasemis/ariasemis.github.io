@@ -1,0 +1,10 @@
+# path: _data/comments/{post.slug}/entry{timestamp} 
+
+_id: '' # UUID
+date: ''
+message: '' # plain or markdown text
+name: '' # author name
+email: '' # (optional) author email, for gravatar
+photo: '' # (optional) author photo URL
+profile: '' # (optional) author profile URL
+url: '' # (optional) webmention source URL

@@ -24,10 +24,6 @@ h3 { font-size: 1.25rem; }
     background-color: $color_light_on_dark;
     color: $color_dark_on_light;
     
-    #comments {
-        border-top: 1px solid $color_shadow_light;    
-    }
-    
     h1, h2, h3, h4, h5, h6 {
         font-family: $font-sans;
         
@@ -51,7 +47,7 @@ h3 { font-size: 1.25rem; }
     p {
         line-height: 1.5rem;
     }
-        
+    
     dl {
         font-size: .9rem;
         
@@ -259,6 +255,10 @@ h3 { font-size: 1.25rem; }
         align-items: flex-start;
         padding: 1rem 0 0;
         border-top: solid 1px $color_shadow_light;
+
+        p {
+            line-height: 1rem;
+        }
     }
 
     .comment-avatar {
@@ -280,6 +280,26 @@ h3 { font-size: 1.25rem; }
             font-size: .9rem;
         }
     }
+}
+
+.comment-reactions {
+    border-top: solid 1px $color_shadow_light;
+    border-bottom: solid 1px $color_shadow_light;
+    margin: 1rem 0 0;
+    padding: .5rem 0 .5rem 0;
+    display: flex;
+    justify-content: center;
+    font-family: $font-sans;
+    cursor: default;
+    
+    & > * {
+        padding: 0 .5rem;
+    }
+}
+
+.webmention-form {
+    font-style: italic;
+    font-size: .9rem;
 }
 
 .bad {

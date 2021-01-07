@@ -68,6 +68,13 @@ body {
     margin-bottom: 3rem;
 }
 
+.webmention-form {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    margin-top: .5rem;
+}
+
 // reduce padding on small screen
 @media only screen and (max-width: 30rem) {
     .main {
