@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article class="archive">
+    <header>
+        <h1>Notes</h1>
+    </header>
+    <ul>
+    {% for note in site.notes %}
+        {% if note.title != "Index" %}
+        <li>
+            <a href="{{ note.url }}">{{ note.title }}</a>
+        </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+</article>
