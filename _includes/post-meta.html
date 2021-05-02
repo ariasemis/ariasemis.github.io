@@ -2,7 +2,15 @@
     <time class="dt-published" datetime="{{ include.post.date | date_to_xmlschema }}">
         Posted <span class="ago"></span>
         on
-        <a href="/archive#{{ include.post.date | date: "%Y" }}">{{ include.post.date | date: "%Y-%m-%d"  }}</a>
+        {% if page.is_post %}
+        <a href="/archive#{{ include.post.date | date: "%Y" }}">
+            {{ include.post.date | date: "%Y-%m-%d"  }}
+        </a>
+        {% else %}
+        <a class="u-url" href="{{ include.post.url }}" rel="bookmark">
+            {{ include.post.date | date: "%Y-%m-%d"  }}
+        </a>
+        {% endif %}
     </time>
     <span>
         {% for tag in include.post.tags %}
