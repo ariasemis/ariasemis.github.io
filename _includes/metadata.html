@@ -1,21 +1,26 @@
 <div class="meta">
-    <time class="dt-published" datetime="{{ include.post.date | date_to_xmlschema }}">
-        Posted <span class="ago"></span>
-        on
-        {% if page.is_post %}
-        <a href="/archive#{{ include.post.date | date: "%Y" }}">
-            {{ include.post.date | date: "%Y-%m-%d"  }}
-        </a>
-        {% else %}
-        <a class="u-url" href="{{ include.post.url }}" rel="bookmark">
-            {{ include.post.date | date: "%Y-%m-%d"  }}
-        </a>
-        {% endif %}
-    </time>
-    <span>
-        {% for tag in include.post.tags %}
-        <a class="p-category" href="/tags#{{ tag | slugify }}" rel="tag">{{ tag | upcase }}</a>
-        {% endfor %}
-    </span>
+    
+    <div class="meta-top">
+        <time class="dt-published" datetime="{{ include.post.date | date_to_xmlschema }}">
+            Posted <span class="ago"></span>
+            on
+            {% if page.is_post %}
+            <a href="/archive#{{ include.post.date | date: "%Y" }}">
+                {{ include.post.date | date: "%Y-%m-%d"  }}
+            </a>
+            {% else %}
+            <a class="u-url" href="{{ include.post.url }}" rel="bookmark">
+                {{ include.post.date | date: "%Y-%m-%d"  }}
+            </a>
+            {% endif %}
+        </time>
+        <span>
+            {% for tag in include.post.tags %}
+            <a class="p-category" href="/tags#{{ tag | slugify }}" rel="tag">{{ tag | upcase }}</a>
+            {% endfor %}
+        </span>
+    </div>
+
     <a style="display: none;" rel="author" class="p-author h-card" href="{{ site.parent_url }}">Emilio Arias</a>
+    
 </div>

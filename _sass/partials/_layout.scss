@@ -56,9 +56,12 @@ body {
 }
 
 .meta {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 1.5rem;
+
+    .meta-top {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 #comments {
