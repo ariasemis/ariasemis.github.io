@@ -9,7 +9,7 @@ layout: default
             <a class="p-name u-url u-uid" href="{{ post.url | relative_url }}" rel="bookmark">{{ post.title | escape }}</a>
         </h1>
     </header>
-    {% include post-meta.html post=post %}
+    {% include metadata.html post=post %}
     <div class="e-content">
         {{ post.content }}
     </div>
