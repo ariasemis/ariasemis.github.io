@@ -240,6 +240,15 @@ h3 { font-size: 1.25rem; }
         text-transform: uppercase;
         border-bottom: solid 1px $color_shadow_light;
     }
+
+    .reply-context {
+        font-style: italic;
+        text-align: right;
+
+        a {
+            font-weight: bold;
+        }
+    }
 }
 
 .comment-list {

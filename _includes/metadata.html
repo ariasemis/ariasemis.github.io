@@ -21,6 +21,18 @@
         </span>
     </div>
 
+    {% if include.post.reply-to %}
+    <div class="reply-context">
+        ↩ In reply to
+        {% for source in include.post.reply-to %}
+            {% if forloop.first != true %}
+                and
+            {% endif %}
+            <a href="{{ source.url }}" class="u-in-reply-to">{{ source.name }}</a>
+        {% endfor %}
+    </div>
+    {% endif %}
+
     <a style="display: none;" rel="author" class="p-author h-card" href="{{ site.parent_url }}">Emilio Arias</a>
-    
+
 </div>
