@@ -1,6 +1,0 @@
-_id: '' # wm-id
-type: 'bookmark-of' # possible values: like, repost, bookmark, mention
-url: '' # source
-name: '' # author name
-photo: '' # author photo URL
-profile: '' # author profile URL
