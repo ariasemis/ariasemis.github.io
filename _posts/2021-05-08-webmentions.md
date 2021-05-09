@@ -3,6 +3,7 @@ title: "Webmentions"
 date: 2021-05-08 21:10:00 -0300
 tags: meta web
 comments_locked: true
+published: false
 ---
 
 I spend some time lately adding support for [webmentions](https://webmention.net/).
