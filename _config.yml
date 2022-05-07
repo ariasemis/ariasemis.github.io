@@ -13,13 +13,13 @@ social:
   name: Emilio Arias
   links:
     - https://github.com/ariasemis
-    - https://www.linkedin.com/in/ariasemi/
+    - https://www.linkedin.com/in/ariasemi
 
-url: "https://blog.ariasemi.com/"
+url: "https://blog.ariasemi.com"
 
 baseurl: "" # subpath
 
-parent_url: "https://ariasemi.com/"
+parent_url: "https://ariasemi.com"
 
 paginate: 5
 
