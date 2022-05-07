@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:atom="http://www.w3.org/2005/Atom" exclude-result-prefixes="atom">
+    <xsl:strip-space elements="*"/>
+    <xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes"/>
+    <xsl:template match="/">
+        <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+                <title><xsl:value-of select="/atom:feed/atom:title"/> web feed</title>
+                <meta charset="UTF-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="stylesheet" href="/assets/main.css" />
+            </head>
+            <body class="feed-container">
+                <div class="main">
+                    <header>
+                        <h1>
+                            <!-- https://commons.wikimedia.org/wiki/File:Generic_Feed-icon.svg -->
+                            <svg xmlns="http://www.w3.org/2000/svg" id="RSSicon" viewBox="0 0 8 8" style="vertical-align: text-bottom; width: 1.2em; height: 1.2em;">
+                                <title>RSS feed icon</title>
+                                <style type="text/css">
+                                    .button {stroke: none; fill: orange;}
+                                    .symbol {stroke: none; fill: white;}
+                                </style>
+                                <rect   class="button" width="8" height="8" rx="1.5" />
+                                <circle class="symbol" cx="2" cy="6" r="1" />
+                                <path   class="symbol" d="m 1,4 a 3,3 0 0 1 3,3 h 1 a 4,4 0 0 0 -4,-4 z" />
+                                <path   class="symbol" d="m 1,2 a 5,5 0 0 1 5,5 h 1 a 6,6 0 0 0 -6,-6 z" />
+                            </svg>
+                            
+                            Web Feed
+                        </h1>
+                        <p>
+                            <strong>Subscribe</strong> by copying the URL from the address bar into your newsreader.
+                            Visit <a href="https://aboutfeeds.com">About Feeds</a> if you want to know more about web feeds.
+                        </p>
+                        <a target="_blank">
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="/atom:feed/atom:link[@rel='alternate']/@href"/>
+                            </xsl:attribute>
+                            Go to Website &#x2192;
+                        </a>
+                    </header>
+                    <main>
+                        <h2>Latest Posts</h2>
+                        <xsl:for-each select="/atom:feed/atom:entry">
+                            <article class="oneliner">
+                                <h3>
+                                    <a target="_blank">
+                                        <xsl:attribute name="href">
+                                            <xsl:value-of select="atom:link/@href" />
+                                        </xsl:attribute>
+                                        <xsl:value-of select="atom:title"/>
+                                    </a>
+                                </h3>
+                                <footer>
+                                    <time>
+                                        <xsl:value-of select="atom:published" />
+                                    </time>
+                                </footer>
+                            </article>
+                        </xsl:for-each>
+                    </main>
+                </div>
+            </body>
+        </html>
+    </xsl:template>
+</xsl:transform>
