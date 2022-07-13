@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem "rake"
 
-gem "github-pages", "~> 226", group: :jekyll_plugins
+gem "github-pages", "~> 227", group: :jekyll_plugins
 
 # because Windows does not include zoneinfo files
 install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
