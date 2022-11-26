@@ -25,7 +25,8 @@ paginate: 5
 
 permalink: /:slug
 
-comments_api: https://emi-staticman.herokuapp.com/v2/entry/ariasemis/ariasemis.github.io/master/comments
+comments_enabled: false
+comments_api: ""
 
 repository: https://github.com/ariasemis/ariasemis.github.io
 

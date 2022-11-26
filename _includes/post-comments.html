@@ -29,6 +29,9 @@
     </div>
     {% endif %}
 
+    <!-- comments section -->
+    {% if site.comments_enabled == true %}
+
     {% if site.data.comments[page.slug] or page.comments_locked != true %}
     <h2>Comments</h2>
     {% endif %}
@@ -130,6 +133,9 @@
         </div>
         {% endfor %}
     </div>
+    {% endif %}
+
+    <!-- end comments section -->
     {% endif %}
 
 </section>
