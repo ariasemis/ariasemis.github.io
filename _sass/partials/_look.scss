@@ -355,7 +355,7 @@ h3 { font-size: 1.25rem; }
                     $bottom: random(101 - $top);
                     $skew: random();
                     
-                    clip-path: inset(#{$top}% 0 #{$bottom}% 0);
+                    clip-path: inset(unquote("#{$top}% 0 #{$bottom}% 0"));
                     transform: skew(#{$skew}deg);
                 }
             }

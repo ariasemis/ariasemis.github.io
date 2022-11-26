@@ -13,7 +13,7 @@ title: Posts by Tag
             You can also explore <a href="/archive">posts by date</a>.
         </p>
         <ul>
-            {% assign sorted_tags = (site.tags | sort:0) %}
+            {% assign sorted_tags = site.tags | sort %}
             {% for tag in sorted_tags %}
             <li id="{{ tag[0] | slugify }}">
                 <h5>{{ tag[0] | upcase }}</h5>
