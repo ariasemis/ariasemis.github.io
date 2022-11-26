@@ -9,10 +9,6 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
-    async (2.2.1)
-      console (~> 1.10)
-      io-event (~> 1.1.0)
-      timers (~> 4.1)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -20,8 +16,6 @@ GEM
     colorator (1.1.0)
     commonmarker (0.23.6)
     concurrent-ruby (1.1.10)
-    console (1.16.2)
-      fiber-local
     dnsruby (1.61.9)
       simpleidn (~> 0.1)
     em-websocket (0.5.3)
@@ -38,7 +32,6 @@ GEM
     faraday-net_http (2.0.3)
     ffi (1.15.5)
     ffi (1.15.5-x64-mingw32)
-    fiber-local (1.0.0)
     forwardable-extended (2.6.0)
     gemoji (3.0.1)
     github-pages (227)
@@ -95,18 +88,17 @@ GEM
     html-pipeline (2.14.2)
       activesupport (>= 2)
       nokogiri (>= 1.4)
-    html-proofer (5.0.2)
+    html-proofer (3.19.4)
       addressable (~> 2.3)
-      async (~> 2.1)
+      mercenary (~> 0.3)
       nokogiri (~> 1.13)
+      parallel (~> 1.10)
       rainbow (~> 3.0)
       typhoeus (~> 1.3)
       yell (~> 2.0)
-      zeitwerk (~> 2.5)
     http_parser.rb (0.8.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
-    io-event (1.1.2)
     jekyll (3.9.2)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -233,9 +225,12 @@ GEM
     nokogiri (1.13.9)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
+    nokogiri (1.13.9-x64-mingw32)
+      racc (~> 1.4)
     octokit (4.25.1)
       faraday (>= 1, < 3)
       sawyer (~> 0.9)
+    parallel (1.22.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.7)
@@ -263,7 +258,6 @@ GEM
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     thread_safe (0.3.6)
-    timers (4.3.5)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
     tzinfo (1.2.8)
@@ -273,6 +267,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8.2)
+    unf_ext (0.0.8.2-x64-mingw32)
     unicode-display_width (1.8.0)
     wdm (0.1.1)
     yell (2.2.2)
@@ -284,7 +279,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages (~> 227)
-  html-proofer
+  html-proofer (~> 3.19.0)
   rake
   tzinfo (~> 1.2)
   tzinfo-data
