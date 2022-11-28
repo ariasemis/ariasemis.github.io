@@ -6,6 +6,8 @@ updates:
     interval: daily
   open-pull-requests-limit: 10
   ignore:
-  - dependency-name: tzinfo
+  # temporarily ignore updating this dependency until we can move to ruby 3+
+  # see Gemfile for more info
+  - dependency-name: html-proofer
     versions:
-    - "> 2.0.3, < 3"
+    - ">= 4.0.0"
