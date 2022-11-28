@@ -12,4 +12,4 @@ gem "github-pages", "~> 227", group: :jekyll_plugins
 # -> wait until github-pages properly supports it
 # version 4+ fails to run validation
 # -> see: https://github.com/gjtorikian/html-proofer/issues/781
-gem "html-proofer", "~> 3.19.0"
+gem "html-proofer", "~> 5.0.2"
