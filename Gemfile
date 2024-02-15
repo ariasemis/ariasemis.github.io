@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem "rake"
 
-gem "github-pages", "~> 230", group: :jekyll_plugins
+gem "github-pages", "~> 231", group: :jekyll_plugins
 
 # used to validate html output
 # NOTE:
