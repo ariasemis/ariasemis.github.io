@@ -19,9 +19,9 @@ end
 
 desc 'Validate site'
 task :test => :build do
-    options = { 
-        :assume_extension => true,
-        :allow_hash_href => true, # don't break on <a href="#">
+    options = {
+        allow_hash_href: true, # don't break on <a href="#">
+        only_4xx: true,
         :typhoeus => {
             # avoid SSL errors: https://github.com/gjtorikian/html-proofer/issues/376
             :ssl_verifypeer => false,
