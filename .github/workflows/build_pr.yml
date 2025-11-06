@@ -2,12 +2,14 @@ name: build_pr
 
 on:
   pull_request:
-    branches: [ master ]
+    branches: [ $default-branch ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Build the site in the jekyll/builder container
-      uses: mbursi/jekyll-build-only-action@v1.0.0
+    - uses: actions/checkout@v4
+    - name: setup pages
+      uses: actions/configure-pages@v5
+    - name: build with jekyll
+      uses: actions/jekyll-build-pages@v1
