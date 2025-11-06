@@ -2,7 +2,7 @@ name: build_pr
 
 on:
   pull_request:
-    branches: [ $default-branch, update ]
+    branches: [ master ]
 
 jobs:
   build:
